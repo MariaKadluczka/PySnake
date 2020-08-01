@@ -16,7 +16,7 @@ class TestSnakeGame02(unittest.TestCase):
         def move_snake(self):
             pass
 
-        This method will be used to move the snake around
+        This method will be used to move the snake around   
         """
         game = SnakeGame(10, 15)
         game.move_snake()
