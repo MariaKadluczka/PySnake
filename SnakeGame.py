@@ -34,12 +34,9 @@ class SnakeGame:
     def tick(self):
         self.move_snake()
     
-    def change_direction(self, new_direction):
-        if self.direction == UP and (new_direction == LEFT or new_direction == RIGHT):
+    def change_direction(self, new_direction): 
+        if self.even(self.direction) != self.even(new_direction):
             self.direction = new_direction
-        if self.direction == DOWN and (new_direction == LEFT or new_direction == RIGHT):
-            self.direction = new_direction
-        if self.direction == LEFT and (new_direction == UP or new_direction == DOWN):
-            self.direction = new_direction
-        if self.direction == RIGHT and (new_direction == UP or new_direction == DOWN):
-            self.direction = new_direction
+
+    def even(self, m):
+        return m % 2 == 0
